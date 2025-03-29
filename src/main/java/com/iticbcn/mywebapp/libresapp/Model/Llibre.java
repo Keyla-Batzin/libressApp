@@ -23,21 +23,21 @@ public class Llibre implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_llibre;
 
-    @Column
+    @Column(nullable = false)
     private String titol;
 
-    @Column
+    @Column(nullable = false)
     private String autor;
 
-    @Column
+    @Column(nullable = false)
     private String editorial;
 
-    @Column
+    @Column(unique = true, nullable = false)
     private String isbn;
 
-    @Column(name = "data_publicacio")
-    private LocalDate dataPublicacio;
+    @Column(name = "data_publicacio", nullable = false)
+    private LocalDate data_publicacio;
 
-    @Column
+    @Column(nullable = false)
     private String tematica;
 }

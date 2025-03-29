@@ -11,7 +11,7 @@ import com.iticbcn.mywebapp.libresapp.Repositori.RepoLlibre;
 
 @Service
 public class ServeiLlibreImpl implements ServeiLlibre {
-    
+
     @Autowired
     private RepoLlibre repoLlibre;
 
@@ -30,16 +30,18 @@ public class ServeiLlibreImpl implements ServeiLlibre {
         return repoLlibre.findByTitolAndEditorial(titol, editorial);
     }
 
+    @Override
     public Optional<Llibre> findByIdLlibre(int idLlibre) {
         return repoLlibre.findById(idLlibre);
     }
 
     @Override
     public boolean validarISBN(String isbn) {
-        // TODO: Implementar logica ISBN
-        return false;
+        return isbn.matches("^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$");
     }
 
-    
-
+    @Override
+    public void save(Llibre llibre) {
+        repoLlibre.save(llibre);
+    }
 }
