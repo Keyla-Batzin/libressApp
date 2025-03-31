@@ -5,12 +5,25 @@ Grup: DAM2B
 
 ## Proves
 ### Mostrar tots els llibres
-![alt text](image.png)
+Web:
+![alt text](image-6.png)
+
+Base de dades:
+![alt text](image-7.png)
 ### Creca per ID
-![alt text](image-1.png)
+Web:
+![alt text](image-8.png)
+
+Base de dades:
+![alt text](image-9.png)
 ### Insertar un nou llibre
-![alt text](image-3.png)
-![alt text](image-5.png)
+Web:
+![alt text](image-10.png)
+![alt text](image-11.png)
+
+Base de dades:
+![alt text](image-12.png)
+
 
 ## Preguntes
 ### 1. Per què al servei estem utilitzant mètodes que no hem declarat explícitament al repositori? Com és possible?
